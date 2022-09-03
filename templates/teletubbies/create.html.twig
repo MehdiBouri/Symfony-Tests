@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tous les Teletubbies{% endblock %}
+
+{% block body %}
+
+    <h1>Créer un Teletubbies</h1>
+    
+    {{ form_start(form, {method: 'POST', action: path('teletubbies_create')}) }}
+
+    {{ form_end(form) }}
+
+{% endblock %}

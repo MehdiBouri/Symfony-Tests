@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tous les Teletubbies{% endblock %}
+
+{% block body %}
+    <div style="display:flex">
+        {% for teletubbie in teletubbies %}
+            <div class="card" style="width: 18rem; margin: 0 2%">
+                <img class="card-img-top" style="width:200px" src="https://kultt.fr/wp-content/uploads/2022/04/Teletubbies-25ans.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{teletubbie.name}}</h5>
+                    <p class="card-text">{{teletubbie.color}}</p>
+                    <a href="#" class="btn btn-primary">Supprimer</a>
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+
+{% endblock %}
